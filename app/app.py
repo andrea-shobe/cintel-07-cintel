@@ -10,20 +10,21 @@ df = palmerpenguins.load_penguins()
 ui.page_opts(title="Penguins dashboard", fillable=True)
 
 
-with ui.sidebar(title="Filter controls"):
-    ui.input_slider("mass", "Mass", 2000, 6000, 6000)
-    ui.input_checkbox_group(
-        "species",
-        "Species",
-        ["Adelie", "Gentoo", "Chinstrap"],
-        selected=["Adelie", "Gentoo", "Chinstrap"],
+with ui.sidebar(title="Filter controls"): # Create a sidebar panel titled "Filter controls".
+    # The following creates fields where the user can provide input.#
+    ui.input_slider("mass", "Mass", 2000, 6000, 6000) # Add a slider input for "mass" with a range from 2000 to 6000, with an initial value set to 6000.
+    ui.input_checkbox_group( # Add a group of checkboxes for selecting species.
+        "species", # Input ID for the checkbox group, which is required for retrieving the selected values in the app.
+        "Species", # The label that will be displayed above the checkboxes.
+        ["Adelie", "Gentoo", "Chinstrap"], # Options for the checkboxes.
+        selected=["Adelie", "Gentoo", "Chinstrap"], # The default selected options (in this case, all species are checked off by default).
     )
-    ui.hr()
-    ui.h6("Links")
-    ui.a(
-        "GitHub Source",
-        href="https://github.com/denisecase/cintel-07-tdash",
-        target="_blank",
+    ui.hr() # Creates a horizontal rule (line) in the app, adding a clear dividing line between the input and the output.
+    ui.h6("Links") # Creates a header (h).
+    ui.a( # Creates text with a link.
+        "GitHub Source", # The text.
+        href="https://github.com/denisecase/cintel-07-tdash", # The link attacked to the text.
+        target="_blank", # The target argument determines how the link will open when the text is clicked. "_blank" opens the link in a new browser tab or window.
     )
     ui.a(
         "GitHub App",
