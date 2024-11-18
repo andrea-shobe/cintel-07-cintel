@@ -7,6 +7,7 @@
 - VS Code + Python Extension
 - Git
 - GitHub
+- Bootswatch themes <https://bootswatch.com/>.
 
 ## Try in the Browser
 
