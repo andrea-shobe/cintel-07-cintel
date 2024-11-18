@@ -33,17 +33,17 @@ with ui.sidebar(title="Filter controls"):
     ui.h6("Links")
     ui.a(
         "GitHub Source",
-        href="https://github.com/denisecase/cintel-07-tdash",
+        href="https://github.com/andrea-shobe/cintel-07-cintel",
         target="_blank",
     )
     ui.a(
         "GitHub App",
-        href="https://denisecase.github.io/cintel-07-tdash/",
+        href="https://andrea-shobe.github.io/cintel-07-cintel/",
         target="_blank",
     )
     ui.a(
         "GitHub Issues",
-        href="https://github.com/denisecase/cintel-07-tdash/issues",
+        href="https://github.com/andrea-shobe/cintel-07-cintel/issues",
         target="_blank",
     )
     ui.a("PyShiny", href="https://shiny.posit.co/py/", target="_blank")
@@ -80,7 +80,7 @@ with ui.layout_column_wrap(fill=False):
             return f"{filtered_df()['bill_length_mm'].mean():.1f} mm"
 
     # output of average bill depth
-    with ui.value_box(showcase=icon_svg("ruler-vertical")):
+    with ui.value_box(showcase=icon_svg("ruler-vertical"), style="color: #007bff;"):
         "Average bill depth"
 
         @render.text
